@@ -1,14 +1,14 @@
 .side_bar
   .side_bar__user-name
     .side_bar__user-name__box
-      .side_bar__user-name__box__name
-        yk
-      .side_bar__user-name__box__icon
-        .side_bar__user-name__box__icon__new-btn
-          =link_to "#", class: "side_bar__user-name__box__icon__new-btn" do
+      %h3.side_bar__user-name__box__name
+        = current_user.name
+      %ul.side_bar__user-name__box__icon
+        %li.side_bar__user-name__box__icon__new-btn
+          =link_to do
             = icon("far fa-edit",  class: "side_bar__user-name__box__icon__new-btn")
-        .side_bar__user-name__box__icon__edit-btn
-          =link_to "#", class: "side_bar__user-name__box__icon__edit-btn" do
+        %li.side_bar__user-name__box__icon__edit-btn
+          = link_to edit_user_path(current_user) do
             = icon("fas fa-cog",  class: "side_bar__user-name__box__icon__new-btn")
 
   .side_bar__group-list
