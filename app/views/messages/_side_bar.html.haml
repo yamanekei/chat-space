@@ -1,0 +1,31 @@
+.side_bar
+  .side_bar__user-name
+    .side_bar__user-name__box
+      .side_bar__user-name__box__name
+        yk
+      .side_bar__user-name__box__icon
+        .side_bar__user-name__box__icon__new-btn
+          =link_to "#", class: "side_bar__user-name__box__icon__new-btn" do
+            = icon("far fa-edit",  class: "side_bar__user-name__box__icon__new-btn")
+        .side_bar__user-name__box__icon__edit-btn
+          =link_to "#", class: "side_bar__user-name__box__icon__edit-btn" do
+            = icon("fas fa-cog",  class: "side_bar__user-name__box__icon__new-btn")
+
+  .side_bar__group-list
+    .side_bar__group-list__group
+      .side_bar__group-list__group__name
+        テストグループ1
+      .side_bar__group-list__group__last-message
+        最後のメッセージ
+        
+    .side_bar__group-list__group
+      .side_bar__group-list__group__name
+        テストグループ2
+      .side_bar__group-list__group__last-message
+        最後のメッセージ
+
+    .side_bar__group-list__group
+      .side_bar__group-list__group__name
+        テストグループ3
+      .side_bar__group-list__group__last-message
+        最後のメッセージ
