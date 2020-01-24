@@ -66,9 +66,14 @@
         }
       }
       &__message {
-        font-size: 14px;
         color: #434A54;
         margin-bottom: 10px;
+        &__text {
+          font-size: 14px; 
+        }
+        &__image {
+          
+        }
       }
     }
   }
