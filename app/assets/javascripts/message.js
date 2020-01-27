@@ -55,11 +55,11 @@ $('#new_message').on('submit', function(e){
        var html = buildHTML(data);
        $('.main_chat__message-list').append(html);      
        $('.main_chat__message-form__mpform')[0].reset();
+       $(".main_chat__message-form__mpform__btn").prop("disabled", false);
        $('.main_chat__message-list').animate({ scrollTop: $('.main_chat__message-list')[0].scrollHeight});
      })
      .fail(function() {
       alert("メッセージ送信に失敗しました");
      });
-     return false;
   })
 });
