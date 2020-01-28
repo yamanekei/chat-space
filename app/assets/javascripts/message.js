@@ -2,52 +2,52 @@ $(function(){
   let last_message_id = $('.main_chat__message-list__box:last').data("message-id");
     var buildHTML = function(message) {
       if (message.content && message.image) {
-        var html =`<div class="main_chat__message-list__box" data-message-id=` + message.id + `>` +
-          `<div class="main_chat__message-list__box__date">` +
-            `<div class="main_chat__message-list__box__date__name">` +
-              message.user_name +
-            `</div>` +
-            `<div class="main_chat__message-list__box__date__time">` +
-              message.created_at +
-            `</div>` +
-          `</div>` +
-          `<div class="main_chat__message-list__box__message">` +
-            `<p class="main_chat__message-list__box__message__text">` +
-              message.content +
-            `</p>` +
-            `<img src="` + message.image + `"class="main_chat__message-list__box__message__image" >` +
-          `</div>` +
-        `</div>`
+        var html =`<div class="main_chat__message-list__box" data-message-id = ${message.id} >
+          <div class="main_chat__message-list__box__date">
+            <div class="main_chat__message-list__box__date__name">
+              ${message.user_name}
+            </div>
+            <div class="main_chat__message-list__box__date__time">
+              ${message.created_at}
+            </div>
+          </div>
+          <div class="main_chat__message-list__box__message">
+            <p class="main_chat__message-list__box__message__text">
+              ${message.content} 
+            </p>
+            <img src=${message.image} class="main_chat__message-list__box__message__image" >
+          </div>
+        </div>`
       } else if (message.content) {
-        var html = `<div class="main_chat__message-list__box" data-message-id=` + message.id + `>` +
-          `<div class="main_chat__message-list__box__date">` +
-            `<div class="main_chat__message-list__box__date">` +  
-              message.user_name +
-            `</div>` +
-            `<div class="main_chat__message-list__box__date__time">` +
-              message.created_at +
-            `</div>` +
-          `</div>` +
-          `<div class="main_chat__message-list__box__message">` +
-            `<p class="main_chat__message-list__box__message__text">` +
-              message.content +
-            `</p>` +
-          `</div>` +
-        `</div>`
+        var html = `<div class="main_chat__message-list__box" data-message-id= ${message.id} >
+          <div class="main_chat__message-list__box__date">
+            <div class="main_chat__message-list__box__date"> 
+              ${message.user_name}
+            </div>
+            <div class="main_chat__message-list__box__date__time">
+              ${message.created_at}
+            </div>
+          </div>
+          <div class="main_chat__message-list__box__message">
+            <p class="main_chat__message-list__box__message__text">
+              ${message.content}
+            </p>
+          </div>
+        </div>`
       } else if (message.image) {
-        var html = `<div class="main_chat__message-list__box" data-message-id=` + message.id + `>` +
-          `<div class="main_chat__message-list__box__date">` +
-            `<div class="main_chat__message-list__box__date">` +  
-              message.user_name +
-            `</div>` +
-            `<div class="main_chat__message-list__box__date__time">` +
-              message.created_at +
-            `</div>` +
-          `</div>` +
-          `<div class="main_chat__message-list__box__message">` +
-          `<img src="` + message.image + `" class="class="main_chat__message-list__box__message__image" >` +
-        `</div>` +
-      `</div>`
+        var html = `<div class="main_chat__message-list__box" data-message-id= ${message.id} >
+          <div class="main_chat__message-list__box__date">
+            <div class="main_chat__message-list__box__date">
+              ${message.user_name} 
+            </div>
+            <div class="main_chat__message-list__box__date__time">
+              ${message.created_at} 
+            </div>
+          </div>
+          <div class="main_chat__message-list__box__message">
+          <img src=${message.image} class="class="main_chat__message-list__box__message__image" >
+        </div>
+      </div>`
       };
       return html;
     };
